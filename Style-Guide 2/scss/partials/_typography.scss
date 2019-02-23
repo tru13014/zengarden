@@ -1,0 +1,75 @@
+
+$color-1: #DCD5D0; // Light gray - Background color
+$color-2: #7b7a6d; // Darker gray - Accent shapes
+$color-3: #55554c; // Darkest gray - Attention shapes
+$color-4: #D45C10; // Orange - Important titles and page accents
+$color-5: #000000; // Black - Font
+$color-6: #ffffff; // White - For fonts over the darker and darkest grays
+
+// // additional colors
+
+
+$success: #6fce72; // green
+$alert: $color-3;  // red
+
+// fonts
+
+$primary-font: 'Merriweather', serif;
+$secondary-font: 'Open Sans', sans-serif;
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+
+h1, h2 {
+	font-family: $secondary-font;
+	color: $color-2;
+}
+
+h1 {
+	font-size: 2.4rem;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 0 0 .4em;
+
+	@include MQ(S) {
+		font-size: 3.2rem;
+	}
+
+	@include MQ(M) {
+		font-size: 4rem;
+	}
+}
+
+h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 1em 0;
+
+	@include MQ(S) {
+		font-size: 1.8rem;
+		margin: 1em 0 1.4em;
+	}
+}
+
+section > h2::before {
+	/* number before each section title */
+	color: darken($color-4, 15%);
+}
+
+p {
+	font-size: 1.4rem;
+	line-height: 1.4;
+	color: lighten($color-2, 25%);
+
+	a {
+		color: $color-1;
+		text-decoration: underline;
+	}
+
+	@include MQ(S) {
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+}
